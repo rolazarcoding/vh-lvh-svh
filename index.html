@@ -1,0 +1,177 @@
+<html>
+  <div style="display:flex">
+    <div id="vh" style="height:100vh; width:33vw">
+      <ul class="scrollable" style="font-size: xxx-large">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="lvh" style="height:100lvh; width:33vw">
+      <ul class="scrollable" style="font-size: xxx-large">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="svh" style="height:100svh; width:33vw">
+      <ul class="scrollable" style="font-size: xxx-large">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    window.onresize = displaySize;
+    window.onscroll = displaySize;
+    const vhList = document.querySelectorAll( "#vh li" );
+    const lvhList = document.querySelectorAll( "#lvh li" );
+    const svhList = document.querySelectorAll( "#svh li" );
+    const vh = document.getElementById( "vh" );
+    const lvh = document.getElementById( "lvh" );
+    const svh = document.getElementById( "svh" );
+    displaySize();
+    
+    function displaySize() {
+      vhList.forEach( mapToVh );
+      lvhList.forEach( mapToLvh );
+      svhList.forEach( mapToSvh );
+    }
+    
+    function mapToVh( element, _index, _array ) {
+      const height = Math.trunc( vh.getBoundingClientRect().height );
+      element.innerText = "Viewport height is " + height + " pixels";
+    }
+    
+    function mapToLvh( element, _index, _array ) {
+      const height = Math.trunc( lvh.getBoundingClientRect().height );
+      element.innerText = "Large viewport height is " + height + " pixels";
+    }
+    
+    function mapToSvh( element, _index, _array ) {
+      const height = Math.trunc( svh.getBoundingClientRect().height );
+      element.innerText = "Small viewport height is " + height + " pixels";
+    }
+  </script>
+</html>
